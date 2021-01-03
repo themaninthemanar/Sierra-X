@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp1.Loading"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Loading" Height="408.197" Width="345.082" WindowStyle="None" ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+    <Grid Background="#00000000" OpacityMask="Black">
+        <Rectangle x:Name="Main" HorizontalAlignment="Left" Height="408" RadiusY="5" RadiusX="5" Stroke="#00000000" VerticalAlignment="Top" Width="345" MouseDown="Main_MouseDown">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3F3F3F" Offset="1"/>
+                    <GradientStop Color="#FF151515"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Border x:Name="LoadingBar" BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="287" Margin="23,100,0,0" VerticalAlignment="Top" Width="23" Background="#FF767676" CornerRadius="10">
+            <Border x:Name="progressbar1" BorderBrush="#00000000" BorderThickness="1" Margin="0,0,0,-1" Background="#FF6E59D7" CornerRadius="9" Height="286" VerticalAlignment="Top"/>
+        </Border>
+        <Border x:Name="done_Copy" BorderBrush="#FF464444" BorderThickness="3" Height="30" Margin="19,221,296,0" VerticalAlignment="Top" Background="#FFA43987" CornerRadius="90"/>
+        <Border x:Name="done_Copy1" BorderBrush="#FF343434" BorderThickness="3" Height="30" Margin="19,301,296,0" VerticalAlignment="Top" Background="#FFA43987" CornerRadius="90"/>
+        <Border x:Name="done_Copy2" BorderBrush="#FF343434" BorderThickness="3" Height="30" Margin="19,145,296,0" VerticalAlignment="Top" Background="#FFA43987" CornerRadius="90"/>
+        <Rectangle x:Name="DESCRIPTIONBOX" HorizontalAlignment="Left" Height="30" Margin="54,145,0,0" RadiusY="5" RadiusX="5" Stroke="#00000000" VerticalAlignment="Top" Width="121">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3F3F3F" Offset="1"/>
+                    <GradientStop Color="#FF6E5AD8"/>
+                    <GradientStop Color="#FFA43987" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="TITLE" Content="Loading" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="Gotham SSm Bold" Margin="54,145,0,0" Width="110" Height="30" FontSize="10"/>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="207" Margin="75,-26,-159,0" VerticalAlignment="Top" Width="429" RenderTransformOrigin="0.5,0.5">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6D5AD9" Offset="0"/>
+                    <GradientStop Color="#FFA53986" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="50"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border x:Name="ExitLoading" BorderBrush="#00343434" BorderThickness="3" Height="40" Margin="306,-10,-37,0" VerticalAlignment="Top" Background="#FFEE3A3A" MouseDown="Done_Copy3_MouseDown" MouseEnter="Done_Copy3_MouseEnter" MouseLeave="ExitLoading_MouseLeave" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="54.462"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Label x:Name="LOGOMAIN" Content="Sierra" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="Gotham SSm Bold" FontSize="30" Margin="171,23,0,0"/>
+        <Label x:Name="LOGOMAIN_Copy" Content="Loading, please wait..." HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="Gotham SSm Bold" FontSize="10" Margin="171,69,0,0" RenderTransformOrigin="0.596,1.217"/>
+    </Grid>
+</Window>

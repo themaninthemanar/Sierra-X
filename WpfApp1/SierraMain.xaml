@@ -1,0 +1,97 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" x:Class="WpfApp1.SierraMain"
+        mc:Ignorable="d"
+        Title="SierraMain" Height="391.854" Width="775.983" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent">
+    <Grid Background="#00191919" Height="392" VerticalAlignment="Top">
+        <Rectangle HorizontalAlignment="Left" Height="393" Stroke="#00000000" VerticalAlignment="Top" Width="776" RadiusX="10" RadiusY="10" Margin="0,0,0,-1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF393A3A" Offset="0"/>
+                    <GradientStop Color="#FF232323" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="42" Stroke="#00000000" VerticalAlignment="Top" Width="776" Margin="0,351,0,-1" Fill="#FF151515"/>
+        <Border BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="16" VerticalAlignment="Top" Width="16" Background="#FFFF4343" CornerRadius="100" Margin="4,4,0,0"/>
+        <Border BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="16" VerticalAlignment="Top" Width="16" Background="#FFFF9043" CornerRadius="100" Margin="25,4,0,0"/>
+        <Rectangle x:Name="DragBar" HorizontalAlignment="Left" Height="36" Margin="44,0,0,0" RadiusY="5" RadiusX="5" Stroke="#00000000" VerticalAlignment="Top" Width="732" Fill="#00000000" MouseDown="DragBar_MouseDown"/>
+        <Button HorizontalAlignment="Left" Margin="372,351,0,0" VerticalAlignment="Top" Width="47" Height="41" Background="#00DDDDDD" BorderBrush="#00707070">
+            <Image x:Name="HomeResource" Height="41" Width="37" Source="Resources/icons8-home-48.png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="689,351,0,0" VerticalAlignment="Top" Width="47" Height="41" Background="#00DDDDDD" BorderBrush="#00707070">
+            <Image x:Name="HomeResource1" Height="41" Width="37" Source="Resources/console_48px.png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="44,351,0,0" VerticalAlignment="Top" Width="47" Height="41" Background="#00DDDDDD" BorderBrush="#00707070">
+            <Image x:Name="HomeResource2" Height="41" Width="37" Source="Resources/settings_100px.png"/>
+        </Button>
+        <Grid x:Name="Editor" HorizontalAlignment="Left" Height="315" Margin="0,36,0,0" VerticalAlignment="Top" Width="776">
+            <Border BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="668,275,0,0" VerticalAlignment="Top" Width="98" CornerRadius="17">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1DB954" Offset="0"/>
+                        <GradientStop Color="#FF036425" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Label x:Name="LOGOMAIN" Content="ATTACH" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="Gotham SSm Bold" FontSize="16" Margin="9,-1,0,0" Height="29" Width="78"/>
+            </Border>
+            <Border BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="589,275,0,0" VerticalAlignment="Top" Width="74" CornerRadius="17">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1BB150" Offset="0"/>
+                        <GradientStop Color="#FF036425" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Label x:Name="LOGOMAIN1" Content="SAVE" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="White" FontFamily="Gotham SSm Bold" FontSize="16" Margin="0,-1,9,0" Height="29" Width="56"/>
+            </Border>
+            <Border BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="10,275,0,0" VerticalAlignment="Top" Width="112" CornerRadius="17">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF858585" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Label x:Name="LOGOMAIN2" Content="EXECUTE" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FF121212" FontFamily="Gotham SSm Bold" FontSize="16" Margin="0,0,9,-1" Height="29" Width="92"/>
+            </Border>
+            <Border BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="128,274,0,0" VerticalAlignment="Top" Width="96" CornerRadius="17" RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF9B9B9B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.908"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Label x:Name="LOGOMAIN3" Content="CLEAR" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FF121212" FontFamily="Gotham SSm Bold" FontSize="16" Margin="0,0,9,-1" Height="29" Width="76"/>
+            </Border>
+            <avalonedit:TextEditor HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="247" Width="653" Background="#FF272525" Text="sdtgfdfg" Foreground="White" ShowLineNumbers="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" LineNumbersForeground="White"/>
+
+        </Grid>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="59" Margin="702,-15,-47,0" VerticalAlignment="Top" Width="121" RenderTransformOrigin="0.5,0.5">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6D5AD9" Offset="0"/>
+                    <GradientStop Color="#FFA53986" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="50"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+    </Grid>
+</Window>
